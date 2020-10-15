@@ -1,0 +1,134 @@
+Thu Oct 15 02:46:12 UTC 2020: 
+ sudoku.c | 34 ++++++++++++++++++++++++++++++++--
+ 1 file changed, 32 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:61:3: error: statement with no effect [-Werror=unused-value]
+   for( f; f<9 ;f++ )
+   ^~~
+sudoku.c:63:5: error: statement with no effect [-Werror=unused-value]
+     for( g; g<9 ; g++ )
+     ^~~
+sudoku.c:65:12: error: expected expression before ‘<’ token
+       if(n-<sudo[f][g]==0)
+            ^
+sudoku.c:67:9: error: statement with no effect [-Werror=unused-value]
+         for( numero ; numero<9 ; numero++)
+         ^~~
+sudoku.c:74:13: error: implicit declaration of function ‘PushBack’; did you mean ‘pushBack’? [-Werror=implicit-function-declaration]
+             PushBack(lista, nuevo);
+             ^~~~~~~~
+             pushBack
+sudoku.c:74:22: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+             PushBack(lista, nuevo);
+                      ^~~~~
+                      list
+sudoku.c:74:22: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:77:9: error: expected ‘;’ before ‘}’ token
+         }
+         ^
+cc1: all warnings being treated as errors
+Compilation failed
+Thu Oct 15 02:46:25 UTC 2020: 
+ sudoku.c | 34 ++++++++++++++++++++++++++++++++--
+ 1 file changed, 32 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:61:3: error: statement with no effect [-Werror=unused-value]
+   for( f; f<9 ;f++ )
+   ^~~
+sudoku.c:63:5: error: statement with no effect [-Werror=unused-value]
+     for( g; g<9 ; g++ )
+     ^~~
+sudoku.c:65:12: error: expected expression before ‘<’ token
+       if(n-<sudo[f][g]==0)
+            ^
+sudoku.c:67:9: error: statement with no effect [-Werror=unused-value]
+         for( numero ; numero<9 ; numero++)
+         ^~~
+sudoku.c:74:22: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+             pushBack(lista, nuevo);
+                      ^~~~~
+                      list
+sudoku.c:74:22: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:77:9: error: expected ‘;’ before ‘}’ token
+         }
+         ^
+cc1: all warnings being treated as errors
+Compilation failed
+Thu Oct 15 02:46:43 UTC 2020: 
+ sudoku.c | 34 ++++++++++++++++++++++++++++++++--
+ 1 file changed, 32 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:61:3: error: statement with no effect [-Werror=unused-value]
+   for( f; f<9 ;f++ )
+   ^~~
+sudoku.c:63:5: error: statement with no effect [-Werror=unused-value]
+     for( g; g<9 ; g++ )
+     ^~~
+sudoku.c:65:12: error: expected expression before ‘<’ token
+       if(n-<sudo[f][g]==0)
+            ^
+sudoku.c:67:9: error: statement with no effect [-Werror=unused-value]
+         for( numero ; numero<9 ; numero++)
+         ^~~
+sudoku.c:77:9: error: expected ‘;’ before ‘}’ token
+         }
+         ^
+sudoku.c:79:16: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+         return lista;
+                ^~~~~
+                list
+sudoku.c:79:16: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+Thu Oct 15 02:46:53 UTC 2020: 
+ sudoku.c | 34 ++++++++++++++++++++++++++++++++--
+ 1 file changed, 32 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:61:3: error: statement with no effect [-Werror=unused-value]
+   for( f; f<9 ;f++ )
+   ^~~
+sudoku.c:63:5: error: statement with no effect [-Werror=unused-value]
+     for( g; g<9 ; g++ )
+     ^~~
+sudoku.c:65:12: error: expected expression before ‘<’ token
+       if(n-<sudo[f][g]==0)
+            ^
+sudoku.c:67:9: error: statement with no effect [-Werror=unused-value]
+         for( numero ; numero<9 ; numero++)
+         ^~~
+sudoku.c:77:9: error: expected ‘;’ before ‘}’ token
+         }
+         ^
+cc1: all warnings being treated as errors
+Compilation failed
+Thu Oct 15 02:47:27 UTC 2020: 
+ sudoku.c | 34 ++++++++++++++++++++++++++++++++--
+ 1 file changed, 32 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:65:12: error: expected expression before ‘<’ token
+       if(n-<sudo[f][g]==0)
+            ^
+sudoku.c:77:9: error: expected ‘;’ before ‘}’ token
+         }
+         ^
+Compilation failed
+Thu Oct 15 02:47:40 UTC 2020: 
+ sudoku.c | 34 ++++++++++++++++++++++++++++++++--
+ 1 file changed, 32 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:77:9: error: expected ‘;’ before ‘}’ token
+         }
+         ^
+Compilation failed
+Thu Oct 15 02:47:51 UTC 2020: 
+ sudoku.c | 34 ++++++++++++++++++++++++++++++++--
+ 1 file changed, 32 insertions(+), 2 deletions(-)
+ tests:  2|4
+total_score: 15/70
+7e62b85
