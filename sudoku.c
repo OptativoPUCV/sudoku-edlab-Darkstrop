@@ -75,6 +75,7 @@ List* get_adj_nodes(Node* n)
       if(n->sudo[f][g]==0)
       {
         for( numero=1 ; numero<9 ; numero++)
+        {
         while(numero<9)
         {
           n->sudo[f][g]=numero;
@@ -86,8 +87,9 @@ List* get_adj_nodes(Node* n)
         numero++;
         }
         n->sudo[f][g]=0;
-        
+        }
       }
+
     }
   }
   return list;
