@@ -104,13 +104,13 @@ int is_final(Node* n)
   {
     for( g=0 ; g<9 ; g++ )
     {
-      if(n->sudo[f][g] != 0)
+      if(n->sudo[f][g] == 0)
       {
-        return 1;
+        return 0;
       }
     }
   }
-  return 0;
+  return 1;
 }
 
 Node* DFS(Node* initial, int* cont)
