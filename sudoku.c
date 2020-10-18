@@ -102,13 +102,12 @@ int is_final(Node* n)
   
   for( f=0 ; f<9 ;f++ )
   {
-    while(g<9)
+    for( g=0 ; g<9 ; g++ )
     {
       if(n->sudo[f][g] == 0)
       {
         return 0;
       }
-      g++;
     }
   }
   return 1;
