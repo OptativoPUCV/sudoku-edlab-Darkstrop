@@ -100,7 +100,6 @@ int is_final(Node* n)
   int f;
   int g;
   int numero;
-  List* list=createList();
   
   for( f=0 ; f<9 ;f++ )
   {
@@ -113,11 +112,6 @@ int is_final(Node* n)
           while(numero<10)
           {
             n->sudo[f][g]=numero;
-            if(is_valid(n))
-            {
-              Node* nuevo=copy(n);
-              pushBack(list, nuevo);        
-            }
             numero++;
           }
           n->sudo[f][g]=0;
