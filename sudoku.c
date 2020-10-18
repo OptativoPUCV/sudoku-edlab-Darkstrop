@@ -76,20 +76,19 @@ List* get_adj_nodes(Node* n)
       {
         for( numero=1 ; numero<10 ; numero++)
         {
-        while(numero<9)
-        {
-          n->sudo[f][g]=numero;
-          if(is_valid(n))
+          while(numero<10)
           {
-            Node* nuevo=copy(n);
-            pushBack(list, nuevo);        
+            n->sudo[f][g]=numero;
+            if(is_valid(n))
+            {
+              Node* nuevo=copy(n);
+              pushBack(list, nuevo);        
+            }
+            numero++;
           }
-        numero++;
-        }
-        n->sudo[f][g]=0;
+          n->sudo[f][g]=0;
         }
       }
-
     }
   }
   return list;
