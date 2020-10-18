@@ -68,9 +68,9 @@ List* get_adj_nodes(Node* n)
   int numero;
   List* list=createList();
   
-  for( f=0 ; f<9 ;f++ )
+  for( f=1 ; f<10 ;f++ )
   {
-    for( g=0 ; g<9 ; g++ )
+    for( g=1 ; g<10 ; g++ )
     {
       if(n->sudo[f][g]==0)
       {
@@ -97,34 +97,19 @@ List* get_adj_nodes(Node* n)
 
 int is_final(Node* n)
 {
-  int f;
+ /* int f;
   int g;
-  int numero;
   
   for( f=0 ; f<9 ;f++ )
   {
     for( g=0 ; g<9 ; g++ )
     {
-      if(n->sudo[f][g]==0)
+      if(n->sudo[f][g] != 0)
       {
-        for( numero=1 ; numero<10 ; numero++)
-        {
-          while(numero<10)
-          {
-            n->sudo[f][g]=numero;
-            numero++;
-          }
-          n->sudo[f][g]=0;
-        }
         return 1;
       }
-      else
-      {
-        return 0;
-      }
     }
-  }
-  
+  }*/
   return 0;
 }
 
