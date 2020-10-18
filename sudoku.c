@@ -122,11 +122,16 @@ int is_final(Node* n)
           }
           n->sudo[f][g]=0;
         }
+        return 1;
+      }
+      else
+      {
+        return 0;
       }
     }
   }
   
-  return 1;
+  return 0;
 }
 
 Node* DFS(Node* initial, int* cont)
