@@ -84,11 +84,30 @@ List* get_adj_nodes(Node* n)
 }
 
 
-int is_final(Node* n){
-    return 0;
+int is_final(Node* n)
+{
+  
+  
+  
+  
+  return 0;
 }
 
-Node* DFS(Node* initial, int* cont){
+Node* DFS(Node* initial, int* cont)
+{
+/*  stack *S = createStack
+  push(S,n);
+
+  while (size(S != 0){
+    node * n= pop(S); // es al reves
+    n = top(S)
+    if (n.finalS == true) return n;
+
+List * adj = get_adj_node(n);
+
+
+  
+  */
   return NULL;
 }
 
