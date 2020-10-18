@@ -97,7 +97,7 @@ List* get_adj_nodes(Node* n)
 
 int is_final(Node* n)
 {
- /* int f;
+  int f;
   int g;
   
   for( f=0 ; f<9 ;f++ )
@@ -109,7 +109,7 @@ int is_final(Node* n)
         return 1;
       }
     }
-  }*/
+  }
   return 0;
 }
 
