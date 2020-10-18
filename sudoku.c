@@ -96,20 +96,21 @@ List* get_adj_nodes(Node* n)
 
 
 int is_final(Node* n)
-{/*
+{
   int f;
   int g;
   
   for( f=0 ; f<9 ;f++ )
   {
-    for( g=0 ; g<9 ; g++ )
+    while(g<9)
     {
       if(n->sudo[f][g] == 0)
       {
         return 0;
       }
+      g++;
     }
-  }*/
+  }
   return 1;
 }
 
