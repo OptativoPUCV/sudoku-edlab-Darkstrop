@@ -106,13 +106,15 @@ int is_final(Node* n)
 
 Node* DFS(Node* initial, int* cont)
 {
-/*  stack *S = createStack
+ /* Stack *S = createStack;
   push(S,n);
 
-  while (size(S != 0){
-    node * n= pop(S); // es al reves
-    n = top(S)
+  while (size(S != 0)
+  {
+    n = top(S);
+    node * n= pop(S);
     if (n.finalS == true) return n;
+  }
 
 List * adj = get_adj_node(n);
 
