@@ -74,7 +74,7 @@ List* get_adj_nodes(Node* n)
     {
       if(n->sudo[f][g]==0)
       {
-        for( numero=0 ; numero<9 ; numero++)
+        for( numero=1 ; numero<9 ; numero++)
         {
         while(numero<9)
         {
