@@ -71,18 +71,18 @@ int is_valid(Node* n)
         }
       }
       int ewe;
-        h= 3*(f/3) + (g/3);
-        for( ewe=0;ewe<9;ewe++)
-        {
-          int x= 3*(h/3) + (ewe/3) ;
-          int d= 3*(h%3) + (ewe%3) ;
-          if (n->sudo[f][g] == n->sudo[x][d] && (f!=x && g!=d))
-          {
-            return 0;
-          }
-        }        
-      }
+      int owo;
+      h= 3*(f/3) + (g/3);
+      for( ewe=0;ewe<9;ewe++)
+      {
+        owo= 3*(h/3) + (ewe/3) ;
+        int d= 3*(h%3) + (ewe%3) ;
+        if (n->sudo[f][g] == n->sudo[owo][d] && (f!=owo && g!=d))   {
+          return 0;
+        }
+      }        
     }
+  }
   return 1;
 }
 
