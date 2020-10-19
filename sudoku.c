@@ -44,35 +44,48 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-    int i, j, k;
-    
-    //Linear check
-    for (i=0; i<9; i++){
-      //Create an array, it saves numbers to compare
-      for (j=0; j<9; j++){ 
-        if (n->sudo[i][j] == 0) continue;
+int f;
+int g;
+int h;
 
-        for (k=0; k<9; k++){
-
-            if (n->sudo[i][j] == n->sudo[i][k] && j != k){
-              return 0;
-            }
-            if (n->sudo[i][j] == n->sudo[k][j] && i != k){
-              return 0;
-            }
+for( f=0 ; f<9 ; f++ )
+{
+  for( g=0 ; g<9 ; g++ )
+  {
+    if (n->sudo[f][g] == 0) continue;
+    for( h=0 ; h<9 ; h++ )
+    {
+       if (n->sudo[f][g] == n->sudo[f][h] && g != h)
+        {
+        return 0;
         }
-        k= 3*(i/3) + (j/3);
-        for(int p=0;p<9;p++){
-            int x= 3*(k/3) + (p/3) ;
-            int d= 3*(k%3) + (p%3) ;
-            if (n->sudo[i][j] == n->sudo[x][d] && (i!=x && j!=d)){
-              return 0;
-            }
-        }        
-      }
+        else
+        {
+          if (n->sudo[f][g] == n->sudo[h][g] && f != h)
+          {
+            return 0;
+          }
+        }
     }
+    int ewe=0;
+    int owo=0;
+    int awa=0;
+    h= f+(g/3);
+    while(ewe<9)
+    {
+      owo= h + (ewe/3);
+      awa= 3*(h%3) + (ewe%3);
+      if(n->sudo[f][g]==n->sudo[owo][awa]&&(f!=owo && g!=awa))
+      {
+      	return 0;
+      }
+     ewe++;
+    }
+  }
+}
   return 1;
 }
+
 
 
 List* get_adj_nodes(Node* n)
