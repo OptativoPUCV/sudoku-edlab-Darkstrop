@@ -43,7 +43,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n)
-{/*
+{
     int i, j, k;
     
     //Linear check
@@ -70,7 +70,7 @@ int is_valid(Node* n)
             }
         }        
       }
-    }*/
+    }
   return 1;
 }
 
