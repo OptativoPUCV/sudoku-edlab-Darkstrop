@@ -116,20 +116,22 @@ int is_final(Node* n){
     return 1;
 }
 
-Node* DFS(Node* initial, int* cont){
-  Stack *s = createStack();
-  push(s,initial);
-  while (get_size(s) != 0){
-      Node * h= top(s);
-      pop(s); 
-      //n = top(s)
-      if (is_final(h) == 1) return h;
-      List * adj = get_adj_nodes(h); 
-      Node * aux= first(adj);
-      while (aux){
-        push(s,aux);
-        aux= next(adj);
-      }
+Node* DFS(Node* initial, int* cont)
+{
+  Stack *storm = createStack();
+  push(storm,initial);
+  while (get_size(storm) != 0)
+  {
+    Node * h= top(storm);
+    pop(storm); 
+    if (is_final(h) == 1) return h;
+    List * adj = get_adj_nodes(h); 
+    Node * aux= first(adj);
+    while (aux)
+    {
+      push(storm,aux);
+      aux= next(adj);
+    }
   }
   return NULL;
 } 
