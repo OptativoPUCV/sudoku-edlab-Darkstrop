@@ -133,10 +133,7 @@ Node* DFS(Node* initial, int* cont)
   {
     Node* ewe = top(Storm);
     pop(Storm);
-    if(is_final(ewe)==1)
-    {
-      return ewe;
-    }
+    if(is_final(ewe)==1)return ewe;
     List* adj= get_adj_nodes(ewe);
     Node* owo= first(adj);
     while(owo)
@@ -149,7 +146,6 @@ Node* DFS(Node* initial, int* cont)
   return NULL;
 }
  
-
 
 /*
 int main( int argc, char *argv[] ){
