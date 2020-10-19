@@ -122,15 +122,15 @@ Node* DFS(Node* initial, int* cont)
   push(storm,initial);
   while (get_size(storm) != 0)
   {
-    Node * h= top(storm);
+    Node * ewe= top(storm);
     pop(storm); 
-    if (is_final(h) == 1) return h;
-    List * adj = get_adj_nodes(h); 
-    Node * aux= first(adj);
-    while (aux)
+    if (is_final(ewe) == 1) return ewe;
+    List * adj = get_adj_nodes(ewe); 
+    Node * owo= first(adj);
+    while (owo)
     {
-      push(storm,aux);
-      aux= next(adj);
+      push(storm,owo);
+      owo= next(adj);
     }
   }
   return NULL;
