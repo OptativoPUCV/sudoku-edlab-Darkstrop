@@ -54,21 +54,6 @@ void print_node(Node* n)
 
 int is_valid(Node* n)
 {
-int f, g, h;
-
-for( f=0 ; f<9 ; f++ )
-{
-  for( g=0 ; g<9 ; g++ )
-  {
-    for( h=0 ; h<9 ; h++ )
-    {
-
-    }
-
-  }
-}
-
-
   return 1;
 }
 
@@ -147,7 +132,6 @@ Node* DFS(Node* initial, int* cont)
   }
   return NULL;
 }
-
 
 
 /*
