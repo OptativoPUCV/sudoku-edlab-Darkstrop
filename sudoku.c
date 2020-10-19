@@ -43,7 +43,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n)
-{
+{/*
   int f;
   int g;
   int h;
@@ -83,12 +83,9 @@ int is_valid(Node* n)
         }
       }        
     }
-  }
+  }*/
   return 1;
 }
-
-
-
 
 List* get_adj_nodes(Node* n)
 {
