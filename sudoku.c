@@ -129,7 +129,7 @@ Node* DFS(Node* initial, int* cont)
   Stack *Storm = createStack();
   push(Storm,initial);
 
-  while (get_size(Storm) != 0)
+  while (is_empty(Storm) != 0)
   {
     Node* ewe = top(Storm);
     pop(Storm);
