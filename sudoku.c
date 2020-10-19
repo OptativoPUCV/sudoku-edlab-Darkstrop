@@ -121,7 +121,7 @@ Node* DFS(Node* initial, int* cont)
   while (get_size(Storm) != 0)
   {
     Node* ewe = top(Storm);
-    popFront(Storm);
+    pop(Storm);
     if((is_final(ewe))==1)
     {
       return ewe;
