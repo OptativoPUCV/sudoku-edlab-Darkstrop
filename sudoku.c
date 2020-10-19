@@ -47,7 +47,9 @@ int is_valid(Node* n)
   int f;
   int g;
   int h;
-    
+  int awa;
+  int ewe;
+  int owo;  
   for (f=0; f<9; f++)
   {
     for (g=0; g<9; g++)
@@ -70,14 +72,11 @@ int is_valid(Node* n)
           }
         }
       }
-      int ewe;
-      int owo;
-      int awa;
+    
       h= 3*(f/3) + (g/3);
       for( ewe=0;ewe<9;ewe++)
       {
-        owo= 3*(h/3) + (ewe/3) ;
-        awa= 3*(h%3) + (ewe%3) ;
+        owo= 3*(h/3) + (ewe/3) ;awa= 3*(h%3) + (ewe%3) ;
         if (n->sudo[f][g] == n->sudo[owo][awa] && (f!=owo && g!=awa))
         {
           return 0;
