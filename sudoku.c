@@ -44,39 +44,42 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-  int i;
-  int j;
-  int k;
+  int f;
+  int g;
+  int h;
     
-  for (i=0; i<9; i++)
+  for (f=0; f<9; f++)
   {
-    for (j=0; j<9; j++)
+    for (g=0; g<9; g++)
     { 
-      if (n->sudo[i][j] == 0)
+      if (n->sudo[f][g]==0)
       {
         continue;
       }
-      for (k=0; k<9; k++)
+      for (h=0; h<9; h++)
       {
-        if (n->sudo[i][j] == n->sudo[i][k] && j != k)
+        if (n->sudo[f][g]==n->sudo[f][h] && g!=h)
         {
           return 0;
         }
         else
         {
-          if (n->sudo[i][j] == n->sudo[k][j] && i != k)
+          if (n->sudo[f][g]==n->sudo[h][g] && f!=h)
           {
             return 0;
           }
         }
       }
-        k= 3*(i/3) + (j/3);
-        for(int p=0;p<9;p++){
-            int x= 3*(k/3) + (p/3) ;
-            int d= 3*(k%3) + (p%3) ;
-            if (n->sudo[i][j] == n->sudo[x][d] && (i!=x && j!=d)){
-              return 0;
-            }
+      int ewe;
+        h= 3*(f/3) + (g/3);
+        for( ewe=0;ewe<9;ewe++)
+        {
+          int x= 3*(h/3) + (ewe/3) ;
+          int d= 3*(h%3) + (ewe%3) ;
+          if (n->sudo[f][g] == n->sudo[x][d] && (f!=x && g!=d))
+          {
+            return 0;
+          }
         }        
       }
     }
