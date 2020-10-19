@@ -72,12 +72,14 @@ int is_valid(Node* n)
       }
       int ewe;
       int owo;
+      int awa;
       h= 3*(f/3) + (g/3);
       for( ewe=0;ewe<9;ewe++)
       {
         owo= 3*(h/3) + (ewe/3) ;
-        int d= 3*(h%3) + (ewe%3) ;
-        if (n->sudo[f][g] == n->sudo[owo][d] && (f!=owo && g!=d))   {
+        awa= 3*(h%3) + (ewe%3) ;
+        if (n->sudo[f][g] == n->sudo[owo][awa] && (f!=owo && g!=awa))
+        {
           return 0;
         }
       }        
