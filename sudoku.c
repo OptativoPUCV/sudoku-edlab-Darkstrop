@@ -123,7 +123,7 @@ Node* DFS(Node* initial, int* cont)
     pop(Storm);
     if((is_final(ewe))==1)
     {
-      return NULL;
+      return ewe;
     }
     List* adj= get_adj_nodes(ewe);
     Node* owo= first(adj);
