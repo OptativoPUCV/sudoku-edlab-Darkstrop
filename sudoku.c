@@ -99,7 +99,6 @@ int is_final(Node* n)
 {
   int f;
   int g;
-  
   for( f=0 ; f<9 ;f++ )
   {
     for( g=0 ; g<9 ; g++ )
@@ -124,7 +123,7 @@ Node* DFS(Node* initial, int* cont)
     pop(Storm);
     if((is_final(ewe))==1)
     {
-      return ewe;
+      return NULL;
     }
     List* adj= get_adj_nodes(ewe);
     Node* owo= first(adj);
