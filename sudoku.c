@@ -54,6 +54,45 @@ void print_node(Node* n)
 
 int is_valid(Node* n)
 {
+int f;
+int g;
+int h;
+
+for( f=0 ; f<9 ; f++ )
+{
+  for( g=0 ; g<9 ; g++ )
+  {
+    if (n->sudo[f][g] == 0) continue;
+    for( h=0 ; h<9 ; h++ )
+    {
+       if (n->sudo[f][g] == n->sudo[f][h] && g != h)
+        {
+        return 0;
+        }
+        else
+        {
+          if (n->sudo[f][g] == n->sudo[h][g] && f != h)
+          {
+            return 0;
+          }
+        }
+    }
+    int ewe=0;
+    int owo=0;
+    int awa=0;
+    h= f+(g/3);
+    while(ewe<9)
+    {
+      owo= h + (ewe/3);
+      awa= 3*(h%3) + (ewe%3);
+      if(n->sudo[f][g]==n->sudo[owo][awa]&&(f!=owo && g!=awa))
+      {
+      	return 0;
+      }
+     ewe++;
+    }
+  }
+}
   return 1;
 }
 
@@ -111,13 +150,13 @@ int is_final(Node* n)
 
 Node* DFS(Node* initial, int* cont)
 {
-  Stack *S = createStack();
-  push(S,initial);
+  Stack *Storm = createStack();
+  push(Storm,initial);
 
-  while (get_size(S) != 0)
+  while (get_size(Storm) != 0)
   {
-    Node* ewe = top(S);
-    pop(S);
+    Node* ewe = top(Storm);
+    pop(Storm);
     if(is_final(ewe)==1)
     {
       return ewe;
@@ -126,12 +165,13 @@ Node* DFS(Node* initial, int* cont)
     Node* owo= first(adj);
     while(owo)
     {
-      push(S,owo);
+      push(Storm,owo);
       owo=next(adj);
     }
   }
   return NULL;
 }
+
 
 
 /*
