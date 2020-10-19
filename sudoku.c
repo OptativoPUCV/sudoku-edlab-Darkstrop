@@ -126,6 +126,14 @@ Node* DFS(Node* initial, int* cont)
     {
       return ewe;
     }
+    List* adj= get_adj_nodes(ewe);
+    Node* owo= first(adj);
+    while(owo!=NULL)
+    {
+      push(Storm,owo);
+      owo=next(adj);
+    }
+  free(ewe);
   }
   return NULL;
 }
