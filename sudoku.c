@@ -42,7 +42,8 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+int is_valid(Node* n)
+{/*
     int i, j, k;
     
     //Linear check
@@ -69,7 +70,7 @@ int is_valid(Node* n){
             }
         }        
       }
-    }
+    }*/
   return 1;
 }
 
@@ -93,7 +94,8 @@ List* get_adj_nodes(Node* n)
           if(is_valid(n))
           {
             Node* nuevo=copy(n);
-            pushBack(list, nuevo);            }          
+            pushBack(list, nuevo);            
+          }          
         }
         n->sudo[f][g]=0;
         return list; 
