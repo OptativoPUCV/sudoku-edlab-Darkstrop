@@ -54,18 +54,20 @@ int is_valid(Node* n)
     { 
       if (n->sudo[i][j] == 0)
       {
-         continue;
+        continue;
       }
-
-        for (k=0; k<9; k++){
-
-            if (n->sudo[i][j] == n->sudo[i][k] && j != k){
-              return 0;
-            }
-            if (n->sudo[i][j] == n->sudo[k][j] && i != k){
+      for (k=0; k<9; k++)
+      {
+        if (n->sudo[i][j] == n->sudo[i][k] && j != k)
+        {
+          return 0;
+        }
+        else{
+          if (n->sudo[i][j] == n->sudo[k][j] && i != k){
               return 0;
             }
         }
+      }
         k= 3*(i/3) + (j/3);
         for(int p=0;p<9;p++){
             int x= 3*(k/3) + (p/3) ;
