@@ -98,7 +98,7 @@ for( f=0 ; f<9 ; f++ )
 
 
 List* get_adj_nodes(Node* n)
-{
+{/*
   int f;
   int g;
   int numero;
@@ -126,8 +126,8 @@ List* get_adj_nodes(Node* n)
         }
       }
     }
-  }
-  return list;
+  }*/
+  return 0;
 }
 
 
