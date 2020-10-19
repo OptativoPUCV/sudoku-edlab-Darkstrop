@@ -126,13 +126,13 @@ int is_final(Node* n)
 
 Node* DFS(Node* initial, int* cont)
 {
-  Stack *Storm = createStack();
-  push(Storm,initial);
+  Stack *S = createStack();
+  push(S,initial);
 
-  while (get_size(Storm) != 0)
+  while (get_size(S) != 0)
   {
-    Node* ewe = top(Storm);
-    pop(Storm);
+    Node* ewe = top(S);
+    pop(S);
     if(is_final(ewe)==1)
     {
       return ewe;
@@ -141,7 +141,7 @@ Node* DFS(Node* initial, int* cont)
     Node* owo= first(adj);
     while(owo)
     {
-      push(Storm,owo);
+      push(S,owo);
       owo=next(adj);
     }
   }
