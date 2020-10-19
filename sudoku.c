@@ -87,15 +87,13 @@ List* get_adj_nodes(Node* n)
     {
       if(n->sudo[f][g]==0)
       {
-        while(numero<10)
+        for( numero=1 ; numero<10 ; numero++)
         {
           n->sudo[f][g]=numero;
           if(is_valid(n))
           {
             Node* nuevo=copy(n);
-            pushBack(list, nuevo);        
-          }
-          numero++;
+            pushBack(list, nuevo);            }          
         }
         n->sudo[f][g]=0;
         return list; 
